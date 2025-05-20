@@ -22,16 +22,16 @@ Important: We rely on: that their archive has `lib` directory with `MobileRTC` a
 2) Install locally: `./make.sh`
 3) Link your local pod:
 ```Podfile  
-pod 'ZoomSDK', :path => '/Users/zvsx001/work/opensource/zoom-sdk-pods'
+pod 'RNZoomSDK', :path => '/Users/zvsx001/work/opensource/zoom-sdk-pods'
 ```
-4) Update version in podspec, e.g. `s.dependency "ZoomSDK", '5.17.11.14222'`
+4) Update version in podspec, e.g. `s.dependency "RNZoomSDK", '5.17.11.14222'`
 
 #### 2 Lint
 
 Check if there are no errors `bundle exec pod spec lint --verbose`
 
 Note: It may use cached results, so you need to clean cache sometimes:
-`bundle exec pod cache clean ZoomSDK`
+`bundle exec pod cache clean RNZoomSDK`
 
 #### 3 Publish
 
