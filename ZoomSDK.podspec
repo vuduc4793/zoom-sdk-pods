@@ -1,13 +1,13 @@
 
 Pod::Spec.new do |s|
-  s.name         = "ZoomSDK"
+  s.name         = "RNZoomSDK"
   s.version      = "6.4.5.24566"
   s.summary      = "Pod for zoom-sdk-ios"
   s.description  = <<-DESC
                   Pod for zoom-sdk-ios.
                    DESC
-  s.homepage     = "https://github.com/zoom-us-community/zoom-sdk-pods"
-  s.author       = { "author" => "zvsx001@gmail.com" }
+  s.homepage     = "https://github.com/vuduc4793/zoom-sdk-pods"
+  s.author       = { "author" => "vuduc4793@gmail.com" }
   s.platform     = :ios, "12.0"
 
   s.source = { :http => 'https://github.com/vuduc4793/zoom-sdk-pods/releases/download/6.4.5.24566/zoom-sdk-ios-6.4.5.24566.zip' }
