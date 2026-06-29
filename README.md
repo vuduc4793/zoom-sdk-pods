@@ -35,6 +35,10 @@ pod 'RNZoomSDK', '7.1.0.36909'
 
 [SDK minimum version policy](https://developers.zoom.us/docs/video-sdk/minimum-version/)
 
+> Note: After a new version is published, the CocoaPods CDN can take a few
+> minutes to sync. If `pod install` reports the version as not found, run
+> `pod repo update` (or `pod install --repo-update`) and try again.
+
 ### Note
  
 If there is a new version available, just create issue. 
