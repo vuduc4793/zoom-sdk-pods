@@ -1,27 +1,31 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNZoomSDK"
-  s.version      = "6.4.5.24566"
+  s.version      = "7.1.0.36909"
   s.summary      = "Pod for zoom-sdk-ios"
   s.description  = <<-DESC
                   Pod for zoom-sdk-ios.
                    DESC
   s.homepage     = "https://github.com/vuduc4793/zoom-sdk-pods"
   s.author       = { "author" => "vuduc4793@gmail.com" }
-  s.platform     = :ios, "12.0"
+  s.platform     = :ios, "15.0"
 
-  s.source = { :http => 'https://github.com/vuduc4793/zoom-sdk-pods/releases/download/6.4.5.24566/zoom-sdk-ios-6.4.5.24566.zip' }
+  s.source = { :http => 'https://github.com/vuduc4793/zoom-sdk-pods/releases/download/7.1.0.36909/zoom-sdk-ios-7.1.0.36909.zip' }
   s.requires_arc = true
 
-  s.vendored_frameworks =  "**/lib/MobileRTC.xcframework", "**/lib/MobileRTCScreenShare.xcframework"
+  s.vendored_frameworks =  "**/lib/MobileRTC.xcframework", "**/lib/MobileRTCScreenShare.xcframework", "**/lib/zoomcml.xcframework"
   s.resource = '**/lib/MobileRTCResources.bundle'
 
   s.libraries = "sqlite3", "z.1.2.5", "c++"
   s.weak_framework = 'VideoToolbox', 'CoreMedia', 'CoreVideo', 'CoreGraphics', 'ReplayKit'
 
-  # Note: Zoom SDK has only support for x86_64
+  # Note: Zoom SDK 7.x ships only an arm64 simulator slice (no x86_64).
+  # Exclude x86_64 so both this pod and the consuming app build for arm64 simulators only.
   s.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64 i386'
+  }
+  s.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64 i386'
   }
 
   s.license      =  { :type => 'MIT', :text => <<-LICENSE

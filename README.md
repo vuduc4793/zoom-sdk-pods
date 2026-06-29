@@ -10,12 +10,13 @@ Architectures may vary between pods.
 Pod includes sdk list:
 - MobileRTC.framework
 - MobileRTCScreenShare.framework
+- zoomcml.framework
 - MobileRTCResources.bundle
 
 ### Usage
 Update your Podfile:
 ```
-pod 'RNZoomSDK', '6.4.5.24566'
+pod 'RNZoomSDK', '7.1.0.36909'
 ```
 
 
@@ -23,6 +24,7 @@ pod 'RNZoomSDK', '6.4.5.24566'
 
 |    Version    | Notes                                  | 
 |:-------------:|:---------------------------------------|
+| 7.1.0.36909 | Minimum iOS is 15.0; simulator is arm64-only; adds zoomcml.xcframework |
 | 6.4.5.24566 |                     |
 | 6.1.0.16235 |                     |
 | 5.17.11.14222 | Minimum iOS is 12.0                    |
