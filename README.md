@@ -16,7 +16,7 @@ Pod includes sdk list:
 ### Usage
 Update your Podfile:
 ```
-pod 'RNZoomSDK', '7.1.0.36909'
+pod 'RNZoomSDK', '7.1.5.37603'
 ```
 
 
@@ -24,6 +24,7 @@ pod 'RNZoomSDK', '7.1.0.36909'
 
 |    Version    | Notes                                  | 
 |:-------------:|:---------------------------------------|
+| 7.1.5.37603 | Minimum iOS is 15.0; simulator is arm64-only |
 | 7.1.0.36909 | Minimum iOS is 15.0; simulator is arm64-only; adds zoomcml.xcframework |
 | 6.4.5.24566 |                     |
 | 6.1.0.16235 |                     |
